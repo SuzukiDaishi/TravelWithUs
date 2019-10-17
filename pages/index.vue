@@ -3,7 +3,7 @@
     <header-bar />
     <div class="imageview imageview-inside">
       <div>
-        <h1 class="imageview-inside-logo">Have a Smart TOUR</h1>
+        <h1 class="imageview-inside-logo">Have a smart tourism</h1>
       </div>
     </div>
     <div class="spots">
@@ -89,7 +89,7 @@ export default {
         {
           image: require('@/assets/kanazawa21.jpg'),
           name: '21st Century Museum of Contemporary Art, kanazawa',
-          map: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1609.306706417411!2d136.65750071831627!3d36.56076637939773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff83380db53b801%3A0x512a01db8b6568c1!2z6YeR5rKiMjHkuJbntIDnvo7ooZPppKg!5e0!3m2!1sja!2sjp!4v1571063586742!5m2!1sja!2sjp" frameborder="0" style="border:0;width:100%;height:100%;" allowfullscreen=""></iframe>`,
+          map: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.71936568206!2d136.65596131468422!3d36.56087897999855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff83380db53b801%3A0x512a01db8b6568c1!2s21st%20Century%20Museum%20of%20Contemporary%20Art%2C%20Kanazawa!5e0!3m2!1sen!2sjp!4v1570675797408!5m2!1sen!2sjp" width="100%" height="100%" frameborder="0" style=" border:0;" allowfullscreen=""></iframe>`,
           description: 'The 21st Century Museum of Contemporary Art Kanazawa (Kanazawa 12) is a musium of contemporary art Hirosaka, Kanazawa City, Ishikawa Prefecture.'
         }
       ],
@@ -161,7 +161,7 @@ export default {
   font-size: 10vw;
   font-weight: bold; 
   transform: rotate(-10deg);
-  font-family: 'Monotype Corsiva';
+  font-family: 'Monotype Corsiva', fantasy;
 }
 
 /** image view end */
