@@ -158,7 +158,7 @@ export default {
   height: 100%;
   white-space: nowrap;
   color: white;
-  font-size: 10vw;
+  font-size: 9vw;
   font-weight: bold; 
   transform: rotate(-10deg);
   font-family: 'Monotype Corsiva', fantasy;
