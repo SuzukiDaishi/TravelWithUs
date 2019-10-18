@@ -9,17 +9,17 @@
             <nav class="header-right">
                 <ul>
                     <li class="header-item">
-                        <nuxt-link to="/">
+                        <nuxt-link to="/unimplemented">
                             LOGIN
                         </nuxt-link>
                     </li>
                     <li class="header-item">
-                        <nuxt-link to="/">
+                        <nuxt-link to="/unimplemented">
                             POST
                         </nuxt-link>
                     </li>
                     <li class="header-item">
-                        <nuxt-link to="/">
+                        <nuxt-link to="/unimplemented">
                             LANGUAGE
                         </nuxt-link>
                     </li>

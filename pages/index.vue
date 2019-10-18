@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.min.js';
+import anime from 'animejs/lib/anime.min.js'
 import HeaderBar from '~/components/HeaderBar.vue'
 
 export default {
