@@ -3,11 +3,14 @@
         <header-bar :is-inner-fill="true" />
         <div class="wrapper">
             <div class="image-wrapper">
-                <h2 class="form-title">画像を選択</h2>
+                <h2 class="form-title">Update File</h2>
                 <input type="file" id="image-inputer" accept="image/*" @change="changeImage">
                 <img id="image-view" :src="imageData">
             </div>
-
+            <div class="text-wrapper">
+                <h2 class="form-title">Add Text</h2>
+                <textarea rows="5"></textarea>
+            </div>
         </div>
     </section>
 </template>
@@ -21,7 +24,8 @@ export default {
     },
     data() {
         return {
-            imageData: require('@/assets/camera-retro-solid.svg')
+            imageData: require('@/assets/camera-retro-solid.svg'),
+            isImageSelected: false
         }
     },
     mounted() {
@@ -36,6 +40,7 @@ export default {
             let reader = new FileReader()
             reader.addEventListener("load", () => {
                 this.imageData = reader.result
+                this.isImageSelected = true
             }, false)
             if (image) {
                 reader.readAsDataURL(image)
@@ -48,13 +53,13 @@ export default {
 <style scoped>
 .wrapper {
     padding: 5vh 10vw;
-    font-family: 'Tahoma';
-    font-size: 5vw;
-    color: white;
 }
 
 h2.form-title {
-
+    margin-bottom: 2vh;
+    font-size: 8vw;
+    font-family: 'Tahoma';
+    color: white;
 }
 
 .image-wrapper {
@@ -64,5 +69,23 @@ h2.form-title {
 .image-wrapper>img {
     width: 100%;
     background: wheat;
+}
+
+#image-inputer {
+    display: none;
+}
+
+.text-wrapper {
+    margin-top: 5vh;
+}
+
+.text-wrapper>textarea {
+    width: 100%;
+    height: calc( 1.5em * 5 );;
+    font-size: 1.5em;
+    border-radius: 5px;
+    resize: none;
+    overflow: hidden;
+    border: 1px solid #000;
 }
 </style>
