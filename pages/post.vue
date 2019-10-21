@@ -9,7 +9,18 @@
             </div>
             <div class="text-wrapper">
                 <h2 class="form-title">Add Text</h2>
-                <textarea rows="5"></textarea>
+                <textarea rows="5" v-model="textData"></textarea>
+            </div>
+            <div class="place-wrapper">
+                <h2 class="form-title">Set Place</h2>
+                <select required v-model="placeData">
+                    <option value="" hidden>Choose</option>
+                    <option value="1">場所１</option>
+                    <option value="2">場所２</option>
+                </select>
+            </div>
+            <div class="submit-wrapper">
+                <button>Submit</button>
             </div>
         </div>
     </section>
@@ -20,12 +31,14 @@ import HeaderBar from '~/components/HeaderBar.vue'
 
 export default {
     components: {
-        HeaderBar
+        HeaderBar,
     },
     data() {
         return {
             imageData: require('@/assets/camera-retro-solid.svg'),
-            isImageSelected: false
+            isImageSelected: false,
+            textData: "",
+            placeData: "",
         }
     },
     mounted() {
@@ -53,6 +66,7 @@ export default {
 <style scoped>
 .wrapper {
     padding: 5vh 10vw;
+    font-family: 'Tahoma';
 }
 
 h2.form-title {
@@ -81,11 +95,40 @@ h2.form-title {
 
 .text-wrapper>textarea {
     width: 100%;
-    height: calc( 1.5em * 5 );;
-    font-size: 1.5em;
+    height: calc( 5vh * 5 );;
+    font-size: 5vh;
     border-radius: 5px;
     resize: none;
     overflow: hidden;
     border: 1px solid #000;
+}
+
+.place-wrapper {
+    margin-top: 5vh;
+}
+
+.place-wrapper>select {
+    width: 100%;
+    height: 10vh;
+    background: white;
+    font-size: 5vh;
+    border: 1px;
+    background-image: url("~assets/angle-down-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 10vw 10vh;
+    background-position: right 2vw center;
+}
+
+.submit-wrapper {
+    margin-top: 5vh;
+}
+
+.submit-wrapper>button {
+    width: 100%;
+    height: 10vh;
+    border: 1px;
+    font-size: 5vh;
+    border-radius: 5px;
+    background: #ddd;
 }
 </style>

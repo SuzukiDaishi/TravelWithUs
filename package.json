@@ -15,7 +15,8 @@
   "dependencies": {
     "animejs": "^3.1.0",
     "nuxt": "^2.0.0",
-    "reset-css": "^4.0.1"
+    "reset-css": "^4.0.1",
+    "vue-select-image": "^1.7.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
