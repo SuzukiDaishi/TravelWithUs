@@ -31,8 +31,25 @@
                 </ul>
             </nav>
         </header>
+        <header-bar-space-filler v-if="isInnerFill"></header-bar-space-filler>
     </div>
 </template>
+
+<script>
+import HeaderBarSpaceFiller from '~/components/HeaderBarSpaceFiller.vue'
+
+export default {
+    components: {
+        HeaderBarSpaceFiller
+    },
+    props: {
+        isInnerFill: {
+            type: Boolean,
+            default: false
+        }
+    }
+}
+</script>>
 
 <style scoped>
 /** css reset */

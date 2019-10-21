@@ -1,6 +1,6 @@
 <template>
     <section>
-        <header-bar />
+        <header-bar isInnerFill="ture"/>
         <div class="header-space"></div>
         <div class="message-frame">
             <h2>Coming soon...</h2>
@@ -18,11 +18,7 @@ export default {
 }
 </script>
 
-<style>
-.header-space {
-    width: 100%;
-    height: 6vh;
-}
+<style scoped>
 .message-frame {
     width: 100%;
     height: 94vh;
@@ -36,6 +32,4 @@ export default {
     font-size: 10vw;
     transform: rotate(-10deg);
 }
-
-
 </style>
