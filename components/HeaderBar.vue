@@ -14,7 +14,7 @@
                         </nuxt-link>
                     </li>
                     <li class="header-item">
-                        <nuxt-link to="/unimplemented">
+                        <nuxt-link to="/post">
                             POST
                         </nuxt-link>
                     </li>
