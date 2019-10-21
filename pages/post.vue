@@ -1,12 +1,17 @@
 <template>
     <section>
+        <header-bar isInnerFill="ture" />
         post
     </section>
 </template>
 
 <script>
-export default {
+import HeaderBar from '~/components/HeaderBar.vue'
 
+export default {
+    components: {
+        HeaderBar
+    }
 }
 </script>
 
