@@ -11,6 +11,7 @@ html {
 }
 body {
   overflow-x:hidden;
+  background: rgb(140, 175, 185);
 }
 </style>
 

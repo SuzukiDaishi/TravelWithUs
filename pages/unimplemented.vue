@@ -1,6 +1,6 @@
 <template>
     <section>
-        <header-bar isInnerFill="ture"/>
+        <header-bar :is-inner-fill="true"/>
         <div class="header-space"></div>
         <div class="message-frame">
             <h2>Coming soon...</h2>
