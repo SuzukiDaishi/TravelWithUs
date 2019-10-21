@@ -15,8 +15,7 @@
                 <h2 class="form-title">Set Place</h2>
                 <select required v-model="placeData">
                     <option value="" hidden>Choose</option>
-                    <option value="1">場所１</option>
-                    <option value="2">場所２</option>
+                    <option :value="spot.id" v-for="spot in spotsList" :key="spot.id">{{spot.name}}</option>
                 </select>
             </div>
             <div class="submit-wrapper">
@@ -28,6 +27,7 @@
 
 <script>
 import HeaderBar from '~/components/HeaderBar.vue'
+import axios from 'axios'
 
 export default {
     components: {
@@ -39,6 +39,12 @@ export default {
             isImageSelected: false,
             textData: "",
             placeData: "",
+        }
+    },
+    async asyncData ({ params }) {
+        let { data } = await axios.get(`http://travelwithus.sodeproject.com/api/spot/list`)
+        return {
+            spotsList: data
         }
     },
     mounted() {
