@@ -2,6 +2,10 @@
     <section>
         <header-bar :is-inner-fill="true" />
         <div class="wrapper">
+            <div class="name-wrapper">
+                <h2 class="form-title">Insert Name</h2>
+                <input type="text" v-model="nameData"/>
+            </div>
             <div class="image-wrapper">
                 <h2 class="form-title">Update File</h2>
                 <input type="file" id="image-inputer" accept="image/*" @change="changeImage">
@@ -37,8 +41,9 @@ export default {
         return {
             imageData: require('@/assets/camera-retro-solid.svg'),
             isImageSelected: false,
-            textData: "",
-            placeData: "",
+            textData: '',
+            placeData: '',
+            nameData: ''
         }
     },
     async asyncData ({ params }) {
@@ -83,6 +88,7 @@ h2.form-title {
 }
 
 .image-wrapper {
+    margin-top: 5vh;
     width: 80vw;
 }
 
@@ -101,7 +107,7 @@ h2.form-title {
 
 .text-wrapper>textarea {
     width: 100%;
-    height: calc( 5vh * 5 );;
+    height: calc( 5vh * 5 );
     font-size: 5vh;
     border-radius: 5px;
     resize: none;
@@ -136,5 +142,17 @@ h2.form-title {
     font-size: 5vh;
     border-radius: 5px;
     background: #ddd;
+}
+
+.name-wrapper {
+}
+
+.name-wrapper>input[type=text] {
+    height: 6vh;
+    font-size: 5vh;
+    width: 100%;
+    font-family: 'Tahoma';
+    border-radius: 5px;
+    border: 1px;
 }
 </style>
