@@ -23,7 +23,7 @@
                 </select>
             </div>
             <div class="submit-wrapper">
-                <button>Submit</button>
+                <button @click="submit">Submit</button>
             </div>
         </div>
     </section>
@@ -69,6 +69,24 @@ export default {
             if (image) {
                 reader.readAsDataURL(image)
             }
+        },
+        submit() {
+            if (!this.imageData || !this.isImageSelected || !this.textData || !this.placeData || !this.nameData) {
+                console.error('no input');
+                return
+            }
+
+            let params = new URLSearchParams()
+            params.append('name', this.nameData)
+            params.append('image', this.imageData)
+            params.append('text', this.textData)
+            params.append('place', this.placeData)
+            axios
+            .post(`http://travelwithus.sodeproject.com/api/post/upload`, params)
+            .then(res => {
+                console.log(res.data);
+            })
+
         }
     }
 }

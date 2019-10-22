@@ -42,6 +42,12 @@ module.exports = {
   router: {
     // 実際におく場所のディレクトリを指定
     base: '/mobile/'
+  },
+  modules: [
+    '@nuxtjs/proxy'
+  ],
+  proxy: {
+    '/api/': { target: 'travelwithus.sodeproject.com', pathRewrite: { '^/api/': '' } }
   }
 }
 
