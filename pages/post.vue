@@ -85,6 +85,11 @@ export default {
             .post(`http://travelwithus.sodeproject.com/api/post/upload`, params)
             .then(res => {
                 console.log(res.data);
+                this.imageData = require('@/assets/camera-retro-solid.svg')
+                this.isImageSelected = false
+                this.textData = ''
+                this.placeData = ''
+                this.nameData = ''
             })
 
         }
