@@ -90,6 +90,7 @@ export default {
                 this.textData = ''
                 this.placeData = ''
                 this.nameData = ''
+                this.$router.push('/')
             })
 
         }
